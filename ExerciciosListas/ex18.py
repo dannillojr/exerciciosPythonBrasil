@@ -56,7 +56,7 @@ porcentagens = []
  
 while True:
     try:
-        voto = int(input('NUMERO CAMISA JOGADOR: '))
+        voto = int(input('NUMERO CAMISA JOGADOR [0] para encerrar: '))
 
         if voto == 0:
             os.system('cls')
