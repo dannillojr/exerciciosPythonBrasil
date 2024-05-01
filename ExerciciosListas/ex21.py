@@ -54,4 +54,3 @@ print('')
 
 print(f'O veiculo que consome menos é o {carro_maior_km_litro}')
 
-print('Nenhuam entrada encerrando ...')
