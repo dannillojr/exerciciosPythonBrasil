@@ -17,7 +17,7 @@ Você foi contratado para desenvolver um programa que leia o resultado da enquet
  Após os dados terem sido completamente informados, o programa deverá calcular a percentual de cada um dos 
  concorrentes e informar o vencedor da enquete. O formato da saída foi dado pela empresa, e é o seguinte:
 '''
-
+import os
 nome_sistemas = ['Windows Server','unix','Linux','Netware','Mac os','outros',]
 numero_sistemas = [1,2,3,4,5,6]
 contadores = [0] * 6
@@ -26,7 +26,7 @@ porcetagens = []
 print(f'{"COD/VOTO":<18} {"SISTEMAS":<15}')
 
 for nome, numero in zip(nome_sistemas, numero_sistemas):
-    print(f'{nome:<22} {numero:<15}')
+    print(f'{numero:<18} {nome:<15}')
 
 print('')
 
@@ -35,6 +35,7 @@ while True:
         voto = int(input('VOTE [-1] para encerrar: '))
         
         if voto == -1:
+            os.system('cls')
             break
         else:
             if voto == 1:
@@ -60,7 +61,7 @@ try:
     total_votos = sum(contadores)
 
     print('')
-    print(f'{"SISTEMAS":<18} {"TOTAL/VOTOS":<15} {"PORCETAM/TOTAL/VOTOS":<15}')
+    print(f'{"SISTEMAS":<18} {"TOTAL/VOTOS":<15} {"PORCETAGEM/TOTAL/VOTOS":<15}')
     print('')
 
     for sistema, qtd_votos in zip(nome_sistemas, contadores):
