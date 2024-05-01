@@ -23,7 +23,7 @@ Situação                        Quantidade              Percentual
 3- necessita troca do cabo ou conector  15                     15%
 4- quebrado ou inutilizado              15                     15%
 '''
-
+import os
 identificacoes = {
     1: {'def': 'necessita da esfera'},
     2: {'def': 'necessita de limpeza'},
@@ -47,6 +47,7 @@ while True:
         id_mouse = int(input('QUAL O ID DO MOUSE: '))
 
         if id_mouse == 0:
+            os.system('cls')
             break
         defeito = int(input('DIGITE O COD DO DEFEITO: '))
         print('')
@@ -57,7 +58,7 @@ while True:
             
         id_mouses.append(id_mouse)
         cod_defeitos.append(defeito)
-        
+
     except ValueError as ve:
         print('ERROR' , ve)
         print('Insira uma entrada valida')
